@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>406 Not Allowed</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 4.5vw; /* Menggunakan vw untuk skalabilitas pada berbagai ukuran layar */
+        color: #330033;
+      }
+
+      p {
+        font-size: 1.5vw;
+        color: #555;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 10vw; /* Ukuran font lebih besar di perangkat kecil */
+        }
+
+        p {
+          font-size: 3vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>406</h1>
+      <p>Maaf, halaman yang Anda cari menolak terhubung, dikarenakan anda tidak memenuhi persyaratan minimum pengguna</p>
+    </div>
+  </body>
+</html>

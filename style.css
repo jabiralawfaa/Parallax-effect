@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 8px; /* Lebar scrollbar */
+  height: 8px; /* Tinggi scrollbar untuk horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna track scrollbar */
+  border-radius: 10px; /* Rounded corners pada track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #220022; /* Warna thumb scrollbar yang lebih gelap dari #330033 */
+  border-radius: 10px; /* Rounded corners pada thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #110011; /* Warna thumb scrollbar saat di-hover, lebih gelap lagi */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0); /* Transparan */
+  transition: background-color 0.3s; /* Transisi yang halus */
+  z-index: 1000; /* Pastikan header selalu di atas */
+}
+
+header h1 {
+  font-size: 40px;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  gap: 30px;
+}
+
+header nav a {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 99px;
+  transition: 0.3s;
+  color: #000; /* Warna teks, sesuaikan jika perlu */
+}
+
+header nav a.active {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+header nav a:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+header nav:hover > a:not(:hover) {
+  background: none;
+}
+
+.home {
+  display: flex;
+  height: 100dvh;
+  background: linear-gradient(to top, #d2e2fd 30%, #86a8db);
+  position: relative;
+  overflow: hidden;
+}
+
+.home img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.home .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about {
+  padding: 175px 50px;
+  background: #330033;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 100;
+}
+
+.about h1 {
+  font-size: 40px;
+}
+
+/* Gaya khusus untuk section contact */
+.contact {
+  padding: 125px 50px;
+  background-color: #3a003a; /* Warna latar belakang yang lembut */
+  color: #495057; /* Warna teks */
+}
+
+.contact h1 {
+  color: #007bff; /* Warna judul yang menarik */
+  text-align: center; /* Pusatkan judul */
+  margin-bottom: 20px; /* Jarak antara judul dan konten */
+}
+
+.contact p {
+  text-align: center; /* Pusatkan paragraf */
+  margin-bottom: 20px; /* Jarak antara paragraf dan form */
+  color: #fff;
+}
+
+.contact form {
+  max-width: 500px; /* Lebar maksimal form */
+  margin: 0 auto; /* Pusatkan form */
+  background: white; /* Latar belakang form */
+  padding: 20px; /* Padding dalam form */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan kotak untuk estetika */
+  border-radius: 8px; /* Border radius untuk tampilan yang lebih halus */
+}
+
+.contact label {
+  display: block; /* Buat label menjadi blok */
+  margin-bottom: 5px; /* Jarak antara label dan input */
+}
+
+.contact input,
+.contact textarea {
+  width: 100%; /* Lebar penuh */
+  padding: 10px; /* Padding */
+  margin-bottom: 10px; /* Jarak antara elemen form */
+  border: 1px solid #ced4da; /* Border */
+  border-radius: 4px; /* Border radius */
+}
+
+.contact button {
+  width: 100%; /* Lebar penuh */
+  padding: 10px; /* Padding */
+  background-color: #300030; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none; /* Tidak ada border */
+  border-radius: 4px; /* Border radius */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.3s; /* Transisi untuk hover */
+}
+
+.contact button:hover {
+  background-color: #3a003a; /* Warna saat di-hover */
+}
+
+/* Gaya umum untuk footer */
+footer {
+  background-color: #300030; /* Warna ungu yang sedikit lebih gelap dari #3a003a */
+  color: #fff; /* Warna teks putih */
+  text-align: center; /* Teks di tengah */
+  padding: 20px 0; /* Padding atas dan bawah */
+  font-size: 14px; /* Ukuran font */
+}
+
+.footer-content {
+  max-width: 1200px; /* Lebar maksimal konten */
+  margin: 0 auto; /* Pusatkan konten */
+  padding: 20px; /* Padding */
+}
+
+.footer-content h3 {
+  margin-bottom: 10px; /* Jarak bawah judul */
+}
+
+.footer-content p {
+  margin-bottom: 20px; /* Jarak bawah paragraf */
+}
+
+.socials {
+  list-style: none; /* Hapus style list */
+  padding: 0; /* Hapus padding */
+  display: flex; /* Layout flex */
+  justify-content: center; /* Pusatkan item */
+  gap: 10px; /* Jarak antar item */
+}
+
+.socials li {
+  display: inline; /* Tampilkan inline */
+}
+
+.socials a {
+  display: inline-block; /* Tampilkan block inline */
+  color: #fff; /* Warna teks putih */
+  text-decoration: none; /* Hapus dekorasi teks */
+}
+
+.socials img {
+  width: 24px; /* Lebar gambar */
+  height: auto; /* Tinggi otomatis */
+}
+
+.footer-bottom {
+  border-top: 1px solid #444; /* Garis pemisah */
+  padding-top: 10px; /* Padding atas */
+  margin-top: 20px; /* Margin atas */
+}
